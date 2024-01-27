@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
@@ -29,14 +28,10 @@ struct name *fourth;
 fourth=(struct name*)(malloc(sizeof(struct name)));
 
 /*puting the data in node*/
-cout<<"enter the data in a 1st node = ";
 cin>>frist->data;
-cout<<"enter the data in a 2nd node = ";
-cin>>second->data;
-cout<<"enter the data in a 3rd node = ";
-cin>>third->data;
-cout<<"enter the data in a 4th node = ";
-cin>>fourth->data; 
+second->data=20;
+third->data=30;
+fourth->data=40;
 
 /*LINKING THE NODE*/
 frist->next=second;
