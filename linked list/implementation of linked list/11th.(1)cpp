@@ -1,0 +1,46 @@
+/*count the no of node in the linked list and add the node frist on node   */
+#include<iostream>
+using namespace std;
+class node{
+    public:
+    int data;
+    node* next;
+    node(int data){
+        this->data=data;
+        this->next=NULL;
+    }
+};
+void insert(node* &head,int data){
+    node* temp=new node(data);
+    temp->next=head;
+    head=temp;
+
+}
+void display(node * ptr){
+    int count=0;
+    while(ptr!=NULL){
+        count++;
+        cout<<ptr->data<<"->";
+        ptr=ptr->next;
+    }
+    cout<<endl<<"no of node = "<<count;
+}
+
+int main(){
+     node *head= NULL;
+    
+    int m;
+    cout << "enter the no of node is created = ";
+    cin >> m;
+    int n;
+    for (int i = 1; i <= m; i++)
+    {
+        
+            cout << "enter the data = ";
+            cin >> n;
+            insert(head, n);
+        
+    }
+    display(head);
+
+}
